@@ -2,9 +2,7 @@
 
 **what is it** small game, using Godot. I use Godot with module **futari-addon** (google it(gitlab) ot use this [link](https://gitlab.com/polymorphcool/futari-addon) ), to edit this project you need build Godot with it.
 
-# Using external Assets
-
-[list of all used assets](https://github.com/danilw/e-ani/blob/master/USED_ASSETS_LINKS.md)
+### Using external Assets, [list of all used assets](https://github.com/danilw/e-ani/blob/master/USED_ASSETS_LINKS.md)
 
 **Playavle version(binary):** [danilw.itch.io/e-ani](https://danilw.itch.io/e-ani)
 
