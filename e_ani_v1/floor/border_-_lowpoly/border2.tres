@@ -1,0 +1,7 @@
+[gd_resource type="CubeMesh" load_steps=2 format=2]
+
+[ext_resource path="res://materials/ld_textures/Plaster_lighter_tri.material" type="Material" id=1]
+
+[resource]
+material = ExtResource( 1 )
+size = Vector3( 0.05, 0.6, 0.05 )

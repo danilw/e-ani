@@ -1,0 +1,36 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path.s3tc="res://.import/initialShadingGroup_normal.png-c7f41ca2c0abe2b2f9d0a2bd366daa60.s3tc.stex"
+path.etc2="res://.import/initialShadingGroup_normal.png-c7f41ca2c0abe2b2f9d0a2bd366daa60.etc2.stex"
+metadata={
+"imported_formats": [ "s3tc", "etc2" ],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://floor/soccer_ball/textures/initialShadingGroup_normal.png"
+dest_files=[ "res://.import/initialShadingGroup_normal.png-c7f41ca2c0abe2b2f9d0a2bd366daa60.s3tc.stex", "res://.import/initialShadingGroup_normal.png-c7f41ca2c0abe2b2f9d0a2bd366daa60.etc2.stex" ]
+
+[params]
+
+compress/mode=2
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=1
+flags/repeat=true
+flags/filter=true
+flags/mipmaps=true
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0
