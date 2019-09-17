@@ -1,4 +1,4 @@
-# list of all used assets, follow original author licence
+# list of all used assets, follow original author license
 
 [chess](https://sketchfab.com/3d-models/chess-593b8de23f224391817a68f8bcc078b6)
 [coin](https://sketchfab.com/3d-models/sci-fi-coin-e6c50859b7e841bc99b229f27f2e3fb9)
