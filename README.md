@@ -10,4 +10,4 @@
 
 ### Video:
 
-[![e-ani]()](https://youtu.be/0jKyTBFrpjU)
+[![e-ani](https://danilw.github.io/godot-utils-and-other/yt_e-ani.png)](https://youtu.be/0jKyTBFrpjU)
