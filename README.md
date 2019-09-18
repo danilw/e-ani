@@ -4,7 +4,7 @@
 
 ### Using external Assets, [list of all used assets](https://github.com/danilw/e-ani/blob/master/USED_ASSETS_LINKS.md)
 
-**Playavle version(binary):** [danilw.itch.io/e-ani](https://danilw.itch.io/e-ani)
+**Playable version(binary):** [danilw.itch.io/e-ani](https://danilw.itch.io/e-ani)
 
 **Web version:** this game work in HTML5(wasm) build, and it has huge problems with ANGLE in webbrowsers, so it only can work in Linux. [Link to web-build](https://danilw.itch.io/e-ani-webgl?password=doit) do not launch it on  Windows.
 
