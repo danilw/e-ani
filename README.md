@@ -6,7 +6,9 @@
 
 **Playable version(binary):** [danilw.itch.io/e-ani](https://danilw.itch.io/e-ani)
 
-**Web version:** this game work in HTML5(wasm) build, and it has huge problems with ANGLE in webbrowsers, so it only can work in Linux. [Link to web-build](https://danilw.itch.io/e-ani-webgl?password=doit) do not launch it on  Windows.
+**Web version:** this game work in HTML5(wasm) build, and it has [huge problems with ANGLE](https://github.com/godotengine/godot/issues/32189) in webbrowsers, so it only can work in Linux. [Link to web-build](https://danilw.itch.io/e-ani-webgl?password=doit) do not launch it on  Windows.
+
+### Contact: [**Join discord server**](https://discord.gg/JKyqWgt)
 
 ### Video:
 
