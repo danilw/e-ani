@@ -1,0 +1,259 @@
+[gd_scene load_steps=38 format=2]
+
+[ext_resource path="res://scene1/scripts/b1.gd" type="Script" id=1]
+[ext_resource path="res://textures/particle_k.png" type="Texture" id=2]
+[ext_resource path="res://textures/part_s.png" type="Texture" id=3]
+[ext_resource path="res://scene1/scripts/game_logic/bulletB.gd" type="Script" id=4]
+[ext_resource path="res://textures/particle_kn.png" type="Texture" id=5]
+[ext_resource path="res://materials/particles/eshape/sphere01.tres" type="Texture" id=6]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0, 0.0392157, 0.964052, 1 )
+colors = PoolColorArray( 0.976471, 0.976471, 0.976471, 0, 0.976471, 0.976471, 0.976471, 1, 0.957516, 0.957516, 0.957516, 1, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="Curve" id=3]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.379029, 0.4241 ), -0.62128, -0.62128, 0, 0, Vector2( 0.706722, 0.2217 ), -0.54362, -0.54362, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=4]
+curve = SubResource( 3 )
+
+[sub_resource type="ParticlesMaterial" id=5]
+gravity = Vector3( 0, 0, 0 )
+angular_velocity = 1.5
+scale_curve = SubResource( 4 )
+color_ramp = SubResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=6]
+render_priority = 3
+flags_transparent = true
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+params_blend_mode = 1
+params_depth_draw_mode = 3
+params_billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+albedo_color = Color( 2, 0.0465117, 0, 1 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="QuadMesh" id=7]
+material = SubResource( 6 )
+size = Vector2( 0.25, 0.25 )
+
+[sub_resource type="ParticlesMaterial" id=8]
+gravity = Vector3( 0, 0, 0 )
+angular_velocity = 0.0191222
+scale_curve = SubResource( 4 )
+color_ramp = SubResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=9]
+render_priority = 4
+flags_transparent = true
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+params_blend_mode = 1
+params_billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+albedo_color = Color( 0.05, 2, 0.0953488, 1 )
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="QuadMesh" id=10]
+material = SubResource( 9 )
+size = Vector2( 0.08, 0.08 )
+
+[sub_resource type="SphereShape" id=11]
+radius = 0.06
+
+[sub_resource type="Gradient" id=12]
+offsets = PoolRealArray( 0, 0.206557, 0.862295, 1 )
+colors = PoolColorArray( 0.09375, 0.09375, 0.09375, 0.0470588, 0.976562, 0.976562, 0.976562, 1, 0.999487, 0.999487, 0.999487, 1, 0.117647, 0.117647, 0.117647, 0.0117647 )
+
+[sub_resource type="GradientTexture" id=13]
+gradient = SubResource( 12 )
+
+[sub_resource type="Gradient" id=14]
+offsets = PoolRealArray( 0, 0.114754, 0.481967, 1 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 1, 0.519043, 0.519043, 0.519043, 1, 0.425293, 0.425293, 0.425293, 1 )
+
+[sub_resource type="GradientTexture" id=15]
+gradient = SubResource( 14 )
+
+[sub_resource type="FutariMaterial" id=16]
+emission_shape = 1
+emission_sphere_radius = 0.1
+flag_enable_wind = true
+flag_enable_attractor = true
+flag_enable_vortex = true
+flag_enable_floor = true
+gravity = Vector3( 0, -1.2, 0 )
+scale_random = 0.65
+scale_gradient = SubResource( 15 )
+color_ramp = SubResource( 13 )
+
+[sub_resource type="SpatialMaterial" id=17]
+render_priority = 4
+flags_transparent = true
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+params_blend_mode = 1
+params_billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+albedo_color = Color( 2, 0.2, 0.1, 1 )
+albedo_texture = ExtResource( 5 )
+
+[sub_resource type="QuadMesh" id=18]
+material = SubResource( 17 )
+size = Vector2( 0.07, 0.07 )
+
+[sub_resource type="Gradient" id=19]
+offsets = PoolRealArray( 0, 0.0688525, 0.718033, 1 )
+colors = PoolColorArray( 1, 1, 1, 0.027451, 1, 1, 1, 1, 1, 1, 1, 1, 0.0745098, 0.0745098, 0.0745098, 0.0156863 )
+
+[sub_resource type="GradientTexture" id=20]
+gradient = SubResource( 19 )
+
+[sub_resource type="Curve" id=21]
+min_value = -5.0
+max_value = 3.0
+_data = [ Vector2( 0, -4.2384 ), 0.0, 0.0, 0, 0, Vector2( 0.0975898, -0.8592 ), 0.0, 0.0, 0, 0, Vector2( 0.266541, -0.053 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=22]
+curve = SubResource( 21 )
+
+[sub_resource type="Curve" id=23]
+min_value = -15.0
+max_value = 0.0
+_data = [ Vector2( 0, -15 ), 0.0, 0.0, 0, 0, Vector2( 0.174386, -9.546 ), 26.8569, 26.8569, 0, 0, Vector2( 0.263469, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=24]
+curve = SubResource( 23 )
+
+[sub_resource type="Gradient" id=25]
+offsets = PoolRealArray( 0, 0.101639, 0.472131, 1 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 1, 0.565892, 0.565892, 0.565892, 1, 0.496094, 0.496094, 0.496094, 1 )
+
+[sub_resource type="GradientTexture" id=26]
+gradient = SubResource( 25 )
+
+[sub_resource type="Curve" id=27]
+max_value = 50.0
+_data = [ Vector2( 0, 11.58 ), 0.0, 0.0, 0, 0, Vector2( 0.2819, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.555293, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=28]
+curve = SubResource( 27 )
+
+[sub_resource type="FutariMaterial" id=29]
+emission_shape = 4
+emission_point_texture = ExtResource( 6 )
+emission_point_count = 512
+flag_enable_wind = true
+flag_enable_attractor = true
+flag_enable_vortex = true
+flag_enable_floor = true
+spread = 180.0
+flatness = 1.0
+gravity = Vector3( 0, -1.8, 0 )
+initial_velocity = 3.5
+linear_accel_curve = SubResource( 22 )
+radial_accel_curve = SubResource( 24 )
+tangential_accel_curve = SubResource( 28 )
+scale_random = 0.65
+scale_gradient = SubResource( 26 )
+color_ramp = SubResource( 20 )
+
+[sub_resource type="SpatialMaterial" id=30]
+render_priority = 4
+flags_transparent = true
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+params_blend_mode = 1
+params_billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+albedo_color = Color( 0.1, 1.6, 0.2, 1 )
+albedo_texture = ExtResource( 5 )
+
+[sub_resource type="QuadMesh" id=31]
+material = SubResource( 30 )
+size = Vector2( 0.08, 0.08 )
+
+[node name="b2" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="model" type="Spatial" parent="."]
+
+[node name="Particles" type="Particles" parent="model"]
+cast_shadow = 0
+amount = 120
+lifetime = 0.6
+fixed_fps = 180
+visibility_aabb = AABB( -6.24596, -5.0758, -17.8229, 12.4919, 10.1516, 35.6458 )
+local_coords = false
+process_material = SubResource( 5 )
+draw_pass_1 = SubResource( 7 )
+
+[node name="Spatial" type="Spatial" parent="model"]
+
+[node name="Particles" type="Particles" parent="model/Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.137543, 0 )
+cast_shadow = 0
+amount = 60
+lifetime = 0.6
+fixed_fps = 180
+visibility_aabb = AABB( -6.24596, -5.0758, -17.8229, 12.4919, 10.1516, 35.6458 )
+local_coords = false
+process_material = SubResource( 8 )
+draw_pass_1 = SubResource( 10 )
+
+[node name="Particles2" type="Particles" parent="model/Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.138, 0 )
+cast_shadow = 0
+amount = 60
+lifetime = 0.6
+fixed_fps = 180
+visibility_aabb = AABB( -6.24596, -5.0758, -17.8229, 12.4919, 10.1516, 35.6458 )
+local_coords = false
+process_material = SubResource( 8 )
+draw_pass_1 = SubResource( 10 )
+
+[node name="b1" type="Area" parent="."]
+pause_mode = 2
+input_ray_pickable = false
+collision_layer = 0
+collision_mask = 1025
+script = ExtResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="b1"]
+shape = SubResource( 11 )
+
+[node name="futari" type="Spatial" parent="."]
+
+[node name="f" type="FutariParticles" parent="futari"]
+cast_shadow = 0
+amount = 336
+lifetime = 5.0
+visibility_aabb = AABB( -52.427, -27.6058, -49.6703, 104.854, 55.2115, 99.3406 )
+process_material = SubResource( 16 )
+draw_pass_1 = SubResource( 18 )
+futari_layers = 3
+
+[node name="on_hit" type="FutariParticles" parent="futari"]
+cast_shadow = 0
+emitting = false
+amount = 336
+lifetime = 4.0
+one_shot = true
+explosiveness = 1.0
+visibility_aabb = AABB( -47.2426, -28.5159, -49.553, 94.4851, 57.0318, 99.1059 )
+process_material = SubResource( 29 )
+draw_pass_1 = SubResource( 31 )
+futari_layers = 3

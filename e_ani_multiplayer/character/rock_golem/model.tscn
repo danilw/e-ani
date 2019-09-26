@@ -1,0 +1,395 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://character/rock_golem/m1.mesh" type="ArrayMesh" id=1]
+[ext_resource path="res://character/rock_golem/m2.mesh" type="ArrayMesh" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "head_L"
+tracks/0/type = "transform"
+tracks/0/path = NodePath("skeleton/s/Skeleton:Head_02")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, -0.031, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, -0.031, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "head_R"
+tracks/0/type = "transform"
+tracks/0/path = NodePath("skeleton/s/Skeleton:Head_02")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0.031, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0.031, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "jump"
+tracks/0/type = "transform"
+tracks/0/path = NodePath("skeleton/s/Skeleton:LeftLeg_01")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 1, 1, -2000, 2000, 0, 0, 0, 0, 1, 1, 1, 1 )
+tracks/1/type = "transform"
+tracks/1/path = NodePath("skeleton/s/Skeleton:RightLeg_04")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = PoolRealArray( 1, 1, -2000, -2000, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "run"
+length = 2.0
+loop = true
+tracks/0/type = "transform"
+tracks/0/path = NodePath("skeleton/s/Skeleton:Head_02")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 200, 0, 700, 0, 0, 0, 1, 1, 1, 1, 0.5, 1, 0, 0, 800, 0, 0, 0, 1, 1, 1, 1, 1, 1, 200, 0, 700, 0, 0, 0, 1, 1, 1, 1, 1.5, 1, 0, 0, 800, 0, 0, 0, 1, 1, 1, 1, 2, 1, 200, 0, 700, 0, 0, 0, 1, 1, 1, 1 )
+tracks/1/type = "transform"
+tracks/1/path = NodePath("skeleton/s/Skeleton:LeftArm_00")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = PoolRealArray( 0, 1, 0, 0, 2300, 0, 0, 0, 1, 1, 1, 1, 0.5, 1, 0, 0, 800, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, -700, 0, 0, 0, 1, 1, 1, 1, 1.5, 1, 0, 0, 800, 0, 0, 0, 1, 1, 1, 1, 2, 1, 0, 0, 2300, 0, 0, 0, 1, 1, 1, 1 )
+tracks/2/type = "transform"
+tracks/2/path = NodePath("skeleton/s/Skeleton:RightArm_03")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = PoolRealArray( 0, 1, 0, 0, -700, 0, 0, 0, 1, 1, 1, 1, 0.5, 1, 0, 0, 800, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 2300, 0, 0, 0, 1, 1, 1, 1, 1.5, 1, 0, 0, 800, 0, 0, 0, 1, 1, 1, 1, 2, 1, 0, 0, -700, 0, 0, 0, 1, 1, 1, 1 )
+tracks/3/type = "transform"
+tracks/3/path = NodePath("skeleton/s/Skeleton:LeftLeg_01")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = PoolRealArray( 0, 1, 0, 0, -2500, 0, 0, 0, 1, 1, 1, 1, 0.5, 1, -1000, 1000, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, -500, 500, 2500, 0, 0, 0, 1, 1, 1, 1, 1.5, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 1, 0, 0, -2500, 0, 0, 0, 1, 1, 1, 1 )
+tracks/4/type = "transform"
+tracks/4/path = NodePath("skeleton/s/Skeleton:RightLeg_04")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = PoolRealArray( 0, 1, 0, 0, 2500, 0, 0, 0, 1, 1, 1, 1, 0.5, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, -2500, 0, 0, 0, 1, 1, 1, 1, 1.5, 1, -1000, -1000, 0, 0, 0, 0, 1, 1, 1, 1, 2, 1, 0, 0, 2500, 0, 0, 0, 1, 1, 1, 1 )
+tracks/5/type = "transform"
+tracks/5/path = NodePath("skeleton/s/Skeleton:Torso_05")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = PoolRealArray( 0, 1, 0, 0, 600, 0, 0, 0, 1, 1, 1, 1, 0.5, 1, -300, 0, 700, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 600, 0, 0, 0, 1, 1, 1, 1, 1.5, 1, -300, 0, 700, 0, 0, 0, 1, 1, 1, 1, 2, 1, 0, 0, 600, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=5]
+resource_name = "shoot_L"
+length = 2.0
+loop = true
+tracks/0/type = "transform"
+tracks/0/path = NodePath("skeleton/s/Skeleton:LeftArm_00")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, -2000, 0, 5000, 0, 0, 0, 1, 1, 1, 1, 0.5, 1, -2000, 0, 4800, 0, 0, 0, 1, 1, 1, 1, 1, 1, -2000, 0, 5000, 0, 0, 0, 1, 1, 1, 1, 1.5, 1, -2000, 0, 4800, 0, 0, 0, 1, 1, 1, 1, 2, 1, -2000, 0, 5000, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=6]
+resource_name = "shoot_R"
+length = 2.0
+loop = true
+tracks/0/type = "transform"
+tracks/0/path = NodePath("skeleton/s/Skeleton:RightArm_03")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, -2000, 0, 5000, 0, 0, 0, 1, 1, 1, 1, 0.5, 1, -2000, 0, 4800, 0, 0, 0, 1, 1, 1, 1, 1, 1, -2000, 0, 5000, 0, 0, 0, 1, 1, 1, 1, 1.5, 1, -2000, 0, 4800, 0, 0, 0, 1, 1, 1, 1, 2, 1, -2000, 0, 5000, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=7]
+resource_name = "stay"
+length = 2.0
+loop = true
+tracks/0/type = "transform"
+tracks/0/path = NodePath("skeleton/s/Skeleton:Head_02")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0.031, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 1, 0, 0, 0, 0.031, 0, 0, 1, 1, 1, 1 )
+tracks/1/type = "transform"
+tracks/1/path = NodePath("skeleton/s/Skeleton:LeftArm_00")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = PoolRealArray( 0, 1, 0, 0, 500, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, -500, 0, 0, 0, 1, 1, 1, 1, 1.5, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 1, 0, 0, 500, 0, 0, 0, 1, 1, 1, 1 )
+tracks/2/type = "transform"
+tracks/2/path = NodePath("skeleton/s/Skeleton:RightArm_03")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = PoolRealArray( 0, 1, 0, 0, -500, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 500, 0, 0, 0, 1, 1, 1, 1, 2, 1, 0, 0, -500, 0, 0, 0, 1, 1, 1, 1 )
+tracks/3/type = "transform"
+tracks/3/path = NodePath("skeleton/s/Skeleton:LeftLeg_01")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0.5, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1.5, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+tracks/4/type = "transform"
+tracks/4/path = NodePath("skeleton/s/Skeleton:RightLeg_04")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0.5, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1.5, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+tracks/5/type = "transform"
+tracks/5/path = NodePath("skeleton/s/Skeleton:Torso_05")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = PoolRealArray( 0, 1, 0, 0, 0, 0.02, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 1, 0, 0, 0, 0.02, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=8]
+length = 2.0
+loop = true
+tracks/0/type = "transform"
+tracks/0/path = NodePath("skeleton/s/Skeleton:Head_02")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+tracks/1/type = "transform"
+tracks/1/path = NodePath("skeleton/s/Skeleton:LeftArm_00")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = PoolRealArray( 0, 1, 0, 0, 1500, 0, 0, 0, 1, 1, 1, 1, 0.5, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, -1500, 0, 0, 0, 1, 1, 1, 1, 1.5, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 1, 0, 0, 1500, 0, 0, 0, 1, 1, 1, 1 )
+tracks/2/type = "transform"
+tracks/2/path = NodePath("skeleton/s/Skeleton:RightArm_03")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = PoolRealArray( 0, 1, 0, 0, -1500, 0, 0, 0, 1, 1, 1, 1, 0.5, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1500, 0, 0, 0, 1, 1, 1, 1, 1.5, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 1, 0, 0, -1500, 0, 0, 0, 1, 1, 1, 1 )
+tracks/3/type = "transform"
+tracks/3/path = NodePath("skeleton/s/Skeleton:LeftLeg_01")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = PoolRealArray( 0, 1, 0, 0, -2500, 0, 0, 0, 1, 1, 1, 1, 0.5, 1, -1000, 1000, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, -500, 500, 2500, 0, 0, 0, 1, 1, 1, 1, 1.5, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 1, 0, 0, -2500, 0, 0, 0, 1, 1, 1, 1 )
+tracks/4/type = "transform"
+tracks/4/path = NodePath("skeleton/s/Skeleton:RightLeg_04")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = PoolRealArray( 0, 1, 0, 0, 2500, 0, 0, 0, 1, 1, 1, 1, 0.5, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, -2500, 0, 0, 0, 1, 1, 1, 1, 1.5, 1, -1000, -1000, 0, 0, 0, 0, 1, 1, 1, 1, 2, 1, 0, 0, 2500, 0, 0, 0, 1, 1, 1, 1 )
+tracks/5/type = "transform"
+tracks/5/path = NodePath("skeleton/s/Skeleton:Torso_05")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0.5, 1, -300, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1.5, 1, -300, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=9]
+resource_name = "walk_b"
+length = 2.0
+loop = true
+tracks/0/type = "transform"
+tracks/0/path = NodePath("skeleton/s/Skeleton:Head_02")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( -0.1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, -200, 0, 0, 0, 1, 1, 1, 1, 0.5, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, -200, 0, 0, 0, 1, 1, 1, 1, 1.5, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 1, 0, 0, -200, 0, 0, 0, 1, 1, 1, 1 )
+tracks/1/type = "transform"
+tracks/1/path = NodePath("skeleton/s/Skeleton:LeftArm_00")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = PoolRealArray( 0, 1, 0, 0, 1500, 0, 0, 0, 1, 1, 1, 1, 0.5, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, -1500, 0, 0, 0, 1, 1, 1, 1, 1.5, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 1, 0, 0, 1500, 0, 0, 0, 1, 1, 1, 1 )
+tracks/2/type = "transform"
+tracks/2/path = NodePath("skeleton/s/Skeleton:RightArm_03")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = PoolRealArray( 0, 1, 0, 0, -1500, 0, 0, 0, 1, 1, 1, 1, 0.5, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1500, 0, 0, 0, 1, 1, 1, 1, 1.5, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 1, 0, 0, -1500, 0, 0, 0, 1, 1, 1, 1 )
+tracks/3/type = "transform"
+tracks/3/path = NodePath("skeleton/s/Skeleton:LeftLeg_01")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = PoolRealArray( 0, 1, 0, 0, -2500, 0, 0, 0, 1, 1, 1, 1, 0.5, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, -500, 500, 2500, 0, 0, 0, 1, 1, 1, 1, 1.5, 1, -1000, 1000, 0, 0, 0, 0, 1, 1, 1, 1, 2, 1, 0, 0, -2500, 0, 0, 0, 1, 1, 1, 1 )
+tracks/4/type = "transform"
+tracks/4/path = NodePath("skeleton/s/Skeleton:RightLeg_04")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = PoolRealArray( 0, 1, 0, 0, 2500, 0, 0, 0, 1, 1, 1, 1, 0.5, 1, -1000, -1000, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, -2500, 0, 0, 0, 1, 1, 1, 1, 1.5, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 1, 0, 0, 2500, 0, 0, 0, 1, 1, 1, 1 )
+tracks/5/type = "transform"
+tracks/5/path = NodePath("skeleton/s/Skeleton:Torso_05")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0.5, 1, -300, 0, -150, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1.5, 1, -300, 0, -150, 0, 0, 0, 1, 1, 1, 1, 2, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="AnimationNodeAnimation" id=10]
+animation = "walk_b"
+
+[sub_resource type="AnimationNodeAnimation" id=11]
+animation = "run"
+
+[sub_resource type="AnimationNodeAnimation" id=12]
+animation = "jump"
+
+[sub_resource type="AnimationNodeAnimation" id=13]
+animation = "stay"
+
+[sub_resource type="AnimationNodeAnimation" id=14]
+animation = "shoot_R"
+
+[sub_resource type="AnimationNodeAnimation" id=15]
+animation = "shoot_L"
+
+[sub_resource type="AnimationNodeAdd2" id=16]
+
+[sub_resource type="AnimationNodeAdd2" id=17]
+
+[sub_resource type="AnimationNodeAdd2" id=18]
+
+[sub_resource type="AnimationNodeBlend2" id=19]
+
+[sub_resource type="AnimationNodeBlend2" id=20]
+
+[sub_resource type="AnimationNodeTimeScale" id=21]
+
+[sub_resource type="AnimationNodeBlendTree" id=22]
+graph_offset = Vector2( -33.25, 28.93 )
+nodes/Animation/node = SubResource( 15 )
+nodes/Animation/position = Vector2( 220, 220 )
+"nodes/Animation 2/node" = SubResource( 10 )
+"nodes/Animation 2/position" = Vector2( -240, -20 )
+"nodes/Animation 3/node" = SubResource( 11 )
+"nodes/Animation 3/position" = Vector2( -240, 100 )
+"nodes/Animation 4/node" = SubResource( 12 )
+"nodes/Animation 4/position" = Vector2( 280, 340 )
+"nodes/Animation 5/node" = SubResource( 13 )
+"nodes/Animation 5/position" = Vector2( -60, 220 )
+"nodes/Animation 6/node" = SubResource( 14 )
+"nodes/Animation 6/position" = Vector2( 420, 220 )
+nodes/jump_c/node = SubResource( 16 )
+nodes/jump_c/position = Vector2( 680, 280 )
+nodes/output/position = Vector2( 1020, 220 )
+nodes/shoot_L/node = SubResource( 17 )
+nodes/shoot_L/position = Vector2( 460, 0 )
+nodes/shoot_R/node = SubResource( 18 )
+nodes/shoot_R/position = Vector2( 680, 20 )
+nodes/walk_c/node = SubResource( 19 )
+nodes/walk_c/position = Vector2( -60, 20 )
+nodes/walk_s/node = SubResource( 20 )
+nodes/walk_s/position = Vector2( 280, 0 )
+nodes/walk_t/node = SubResource( 21 )
+nodes/walk_t/position = Vector2( 120, 20 )
+node_connections = [ "output", 0, "jump_c", "walk_s", 0, "walk_t", "walk_s", 1, "Animation 5", "walk_t", 0, "walk_c", "shoot_R", 0, "shoot_L", "shoot_R", 1, "Animation 6", "shoot_L", 0, "walk_s", "shoot_L", 1, "Animation", "walk_c", 0, "Animation 2", "walk_c", 1, "Animation 3", "jump_c", 0, "shoot_R", "jump_c", 1, "Animation 4" ]
+
+[node name="model" type="Spatial"]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
+
+[node name="skeleton" type="Spatial" parent="."]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
+
+[node name="s" type="Spatial" parent="skeleton"]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
+
+[node name="Skeleton" type="Skeleton" parent="skeleton/s"]
+bones/0/name = "_rootJoint"
+bones/0/parent = -1
+bones/0/rest = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+bones/0/enabled = true
+bones/0/bound_children = [  ]
+bones/1/name = "LeftArm_00"
+bones/1/parent = 0
+bones/1/rest = Transform( 0.6, 0.8, -3.49691e-08, -0.8, 0.6, -2.62268e-08, 1.77636e-15, 4.37114e-08, 1, 4501.39, 5652.58, 2.91038e-11 )
+bones/1/enabled = true
+bones/1/bound_children = [  ]
+bones/2/name = "LeftLeg_01"
+bones/2/parent = 0
+bones/2/rest = Transform( 0.477092, 0.878853, 6.63516e-08, -0.878853, 0.477092, 3.60194e-08, -3.55271e-15, -7.54979e-08, 1, 2776.65, 1978.89, 0 )
+bones/2/enabled = true
+bones/2/bound_children = [  ]
+bones/3/name = "Head_02"
+bones/3/parent = 0
+bones/3/rest = Transform( 0.018, 1, 0, -2.31, 0.008, 0, 0, 0, 3, 0, 13386.2, 0 )
+bones/3/enabled = true
+bones/3/bound_children = [  ]
+bones/4/name = "RightArm_03"
+bones/4/parent = 0
+bones/4/rest = Transform( -0.6, 0.8, -4.16439e-07, -0.8, -0.6, -4.52988e-08, -2.86102e-07, 3.05972e-07, 1, -4501.39, 5652.58, -1.16415e-10 )
+bones/4/enabled = true
+bones/4/bound_children = [  ]
+bones/5/name = "RightLeg_04"
+bones/5/parent = 0
+bones/5/rest = Transform( -0.477092, 0.878854, -3.52718e-07, -0.878854, -0.477091, 1.91476e-07, -1.42109e-14, 4.01339e-07, 1, -2776.65, 1978.89, -1.16415e-10 )
+bones/5/enabled = true
+bones/5/bound_children = [  ]
+bones/6/name = "Torso_05"
+bones/6/parent = 0
+bones/6/rest = Transform( 7.54979e-08, 1, -4.2479e-07, -1, 7.54979e-08, -3.20707e-14, 0, 1.49012e-07, 2.85072, -5.74773e-11, 7012.75, -4.9012e-06 )
+bones/6/enabled = true
+bones/6/bound_children = [  ]
+
+[node name="Mesh" type="MeshInstance" parent="skeleton/s/Skeleton"]
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="Mesh 2" type="MeshInstance" parent="skeleton/s/Skeleton"]
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="mid" type="Spatial" parent="skeleton/s"]
+transform = Transform( 1, 1.50996e-07, 6.60024e-15, 0, -4.37114e-08, 1, 1.50996e-07, -1, -4.37114e-08, 52.7207, 8805.5, -139.865 )
+
+[node name="floor" type="Spatial" parent="skeleton/s"]
+transform = Transform( -1, 1.50996e-07, 0, 0, 0, 1, 1.50996e-07, 1, 0, 0, 0, 0 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.452561, 0.891734, 0, -0.891734, 0.452561, 0, 357.667, 265.312 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/head_L = SubResource( 1 )
+anims/head_R = SubResource( 2 )
+anims/jump = SubResource( 3 )
+anims/run = SubResource( 4 )
+anims/shoot_L = SubResource( 5 )
+anims/shoot_R = SubResource( 6 )
+anims/stay = SubResource( 7 )
+anims/walk = SubResource( 8 )
+anims/walk_b = SubResource( 9 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 22 )
+anim_player = NodePath("../AnimationPlayer")
+parameters/jump_c/add_amount = 0.0
+parameters/shoot_L/add_amount = 0.0
+parameters/shoot_R/add_amount = 0.0
+parameters/walk_c/blend_amount = 1.0
+parameters/walk_s/blend_amount = 1.0
+parameters/walk_t/scale = 1.0

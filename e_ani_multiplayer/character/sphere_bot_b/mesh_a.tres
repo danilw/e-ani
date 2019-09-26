@@ -1,0 +1,11 @@
+[gd_resource type="CylinderMesh" load_steps=2 format=2]
+
+[ext_resource path="res://character/sphere_bot_b/mesh_a.material" type="Material" id=1]
+
+[resource]
+material = ExtResource( 1 )
+top_radius = 0.05
+bottom_radius = 0.05
+height = 1.92
+radial_segments = 32
+rings = 1

@@ -1,0 +1,205 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://scene1/scripts/network/network.gd" type="Script" id=1]
+[ext_resource path="res://font/kenpixel/kenpixel_square.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://font/kenpixel/font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://font/fantasque-sans-mono/FantasqueSansMono-Regular.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 35
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.372549, 0.729412, 0, 0.521569 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.117647, 0.117647, 0.117647, 0.745098 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.309804, 1, 0.388235, 0.286275 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.443137, 0.686275, 1, 0.286275 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 25
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.180392, 0.25098, 0.721569, 1 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 1, 0.309804, 0.309804, 0.286275 )
+
+[node name="network" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="network_menu" type="GridContainer" parent="."]
+pause_mode = 2
+margin_right = 1280.0
+margin_bottom = 720.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 3
+
+[node name="Control" type="Control" parent="network_menu"]
+margin_right = 424.0
+margin_bottom = 720.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="sc" type="ScrollContainer" parent="network_menu"]
+margin_left = 428.0
+margin_right = 852.0
+margin_bottom = 720.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="btns" type="VBoxContainer" parent="network_menu/sc"]
+margin_right = 424.0
+margin_bottom = 720.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="head" type="Label" parent="network_menu/sc/btns"]
+visible = false
+margin_right = 424.0
+margin_bottom = 53.0
+custom_fonts/font = SubResource( 1 )
+text = "single player"
+align = 1
+
+[node name="singlep" type="Button" parent="network_menu/sc/btns"]
+visible = false
+margin_right = 424.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 180, 45 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.894118, 0.894118, 0.894118, 1 )
+shortcut_in_tooltip = false
+text = "Start single player"
+
+[node name="head3" type="Label" parent="network_menu/sc/btns"]
+margin_right = 424.0
+margin_bottom = 53.0
+custom_fonts/font = SubResource( 1 )
+text = "Multiplayer"
+align = 1
+
+[node name="ip" type="HBoxContainer" parent="network_menu/sc/btns"]
+editor/display_folded = true
+margin_top = 57.0
+margin_right = 424.0
+margin_bottom = 110.0
+
+[node name="ipx" type="Label" parent="network_menu/sc/btns/ip"]
+margin_right = 52.0
+margin_bottom = 53.0
+custom_fonts/font = SubResource( 1 )
+text = "IP:"
+align = 1
+
+[node name="ip" type="LineEdit" parent="network_menu/sc/btns/ip"]
+margin_left = 56.0
+margin_right = 316.0
+margin_bottom = 53.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 3 )
+text = "127.0.0.1"
+
+[node name="port" type="Label" parent="network_menu/sc/btns/ip"]
+margin_left = 320.0
+margin_right = 424.0
+margin_bottom = 53.0
+custom_fonts/font = SubResource( 1 )
+text = ":8910"
+align = 1
+
+[node name="host" type="Button" parent="network_menu/sc/btns"]
+margin_top = 114.0
+margin_right = 424.0
+margin_bottom = 159.0
+rect_min_size = Vector2( 180, 45 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.894118, 0.894118, 0.894118, 1 )
+shortcut_in_tooltip = false
+text = "host multiplayer"
+
+[node name="join" type="Button" parent="network_menu/sc/btns"]
+margin_top = 163.0
+margin_right = 424.0
+margin_bottom = 208.0
+rect_min_size = Vector2( 180, 45 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.894118, 0.894118, 0.894118, 1 )
+shortcut_in_tooltip = false
+text = "join multiplayer"
+
+[node name="head2" type="Label" parent="network_menu/sc/btns"]
+margin_top = 212.0
+margin_right = 424.0
+margin_bottom = 238.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.65098, 0.65098, 0.65098, 1 )
+text = "twitter.com/arugl"
+align = 2
+
+[node name="wait" type="VBoxContainer" parent="network_menu/sc/btns"]
+editor/display_folded = true
+visible = false
+margin_top = 348.0
+margin_right = 424.0
+margin_bottom = 720.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="head" type="Label" parent="network_menu/sc/btns/wait"]
+margin_right = 424.0
+margin_bottom = 53.0
+custom_styles/normal = SubResource( 7 )
+custom_fonts/font = SubResource( 1 )
+text = "Status:"
+
+[node name="status" type="Label" parent="network_menu/sc/btns/wait"]
+margin_top = 57.0
+margin_right = 424.0
+margin_bottom = 110.0
+custom_styles/normal = SubResource( 8 )
+custom_fonts/font = SubResource( 1 )
+text = "waiting player ..."
+
+[node name="canc" type="Button" parent="network_menu/sc/btns/wait"]
+margin_top = 114.0
+margin_right = 424.0
+margin_bottom = 159.0
+rect_min_size = Vector2( 180, 45 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 9 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.894118, 0.894118, 0.894118, 1 )
+shortcut_in_tooltip = false
+text = "Cancel"
+
+[node name="Control2" type="Control" parent="network_menu"]
+margin_left = 856.0
+margin_right = 1280.0
+margin_bottom = 720.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+[connection signal="pressed" from="network_menu/sc/btns/singlep" to="." method="_on_singlep_pressed"]
+[connection signal="pressed" from="network_menu/sc/btns/host" to="." method="_on_host_pressed"]
+[connection signal="pressed" from="network_menu/sc/btns/join" to="." method="_on_join_pressed"]
+[connection signal="pressed" from="network_menu/sc/btns/wait/canc" to="." method="_on_canc_pressed"]
