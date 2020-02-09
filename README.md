@@ -4,6 +4,8 @@
 
 ### Using external Assets, [list of all used assets](https://github.com/danilw/e-ani/blob/master/USED_ASSETS_LINKS.md)
 
+*2020 updated* to Godot 3.2
+
 **Playable version(binary):** [danilw.itch.io/e-ani](https://danilw.itch.io/e-ani)
 
 **e_ani_multiplayer** this is *Multiplayer* version, by using Godot `rpc()` network. I have test it and it work (lags in real-internet play), critical errors with *wrong node path* on mass node creation/deletion is fixed, but I did not make full-sync, so Godot on Client will display errors with *wrong node path* for first 1-10 frames after object creation on Host. This is very bad and unsafe multiplayer, that I made only for learning Godot multiplayer, *do not use it*. Multiplayer binary versions aviable on danilw.itch.io project page linked above.
