@@ -95,6 +95,5 @@ limits/debugger_stdout/max_errors_per_frame=1000
 [rendering]
 
 threads/thread_model=2
-quality/voxel_cone_tracing/high_quality=false
 environment/default_environment="res://default_env.tres"
 quality/dynamic_fonts/use_oversampling=false

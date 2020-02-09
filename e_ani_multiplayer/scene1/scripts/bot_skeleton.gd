@@ -19,7 +19,7 @@ func _ready():
 
 func _process(delta):
 	
-	var ttr=get_bone_transform(6)
+	var ttr=get_bone_global_pose(6)
 	#shild movement with body
 #	get_node("../../../sh").get_child(0).transform=ttr
 #	get_node("../../../sh").get_child(0).translation+=(2.0)*get_node("../../../sh").get_child(0).transform.basis.y
@@ -30,7 +30,7 @@ func _process(delta):
 	
 	
 	for a in range(get_node("../../../parts").get_child_count()):
-		get_node("../../../parts").get_child(a).transform=get_bone_transform(32+a*2)
+		get_node("../../../parts").get_child(a).transform=get_bone_global_pose(32+a*2)
 		#get_node("../../../parts").get_child(a).rotation=Vector3()
 		
 		#own posiiton

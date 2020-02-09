@@ -1,5 +1,5 @@
 shader_type spatial;
-render_mode blend_mix,depth_draw_alpha_prepass,cull_back,diffuse_lambert_wrap,specular_blinn,world_vertex_coords;
+render_mode blend_mix,depth_draw_alpha_prepass,cull_back,diffuse_lambert_wrap,specular_schlick_ggx,world_vertex_coords;
 uniform vec4 albedo : hint_color;
 uniform sampler2D texture_albedo : hint_albedo;
 uniform float specular;

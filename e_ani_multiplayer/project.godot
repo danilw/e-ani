@@ -95,7 +95,6 @@ limits/debugger_stdout/max_errors_per_frame=1000
 [rendering]
 
 threads/thread_model=2
-quality/voxel_cone_tracing/high_quality=false
 environment/default_clear_color=Color( 0.0823529, 0.14902, 0.180392, 1 )
 environment/default_environment="res://default_env.tres"
 quality/dynamic_fonts/use_oversampling=false
