@@ -10,7 +10,7 @@
 
 **e_ani_multiplayer** this is *Multiplayer* version, by using Godot `rpc()` network. I have test it and it work (lags in real-internet play), critical errors with *wrong node path* on mass node creation/deletion is fixed, but I did not make full-sync, so Godot on Client will display errors with *wrong node path* for first 1-10 frames after object creation on Host. This is very bad and unsafe multiplayer, that I made only for learning Godot multiplayer, *do not use it*. Multiplayer binary versions aviable on danilw.itch.io project page linked above.
 
-**Web version:** this game work in HTML5(wasm) build, and it has [huge problems with ANGLE](https://github.com/godotengine/godot/issues/32189) in webbrowsers, so it only can work in Linux. [Link to web-build](https://danilw.itch.io/e-ani-webgl?password=doit) do not launch it on  Windows.
+**Web version:** this game work in HTML5(wasm) build [Link to web-build](https://danilw.itch.io/e-ani-webgl?password=doit). **Updated 2020**: fixed and now it works.
 
 ### Contact: [**Join discord server**](https://discord.gg/JKyqWgt)
 
