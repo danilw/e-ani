@@ -2,21 +2,19 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Merged_Cube_baseColor.jpeg-74d2da7465e9ce4ad08c65854c92b640.s3tc.stex"
-path.etc2="res://.import/Merged_Cube_baseColor.jpeg-74d2da7465e9ce4ad08c65854c92b640.etc2.stex"
+path="res://.import/Merged_Cube_baseColor.jpeg-74d2da7465e9ce4ad08c65854c92b640.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2" ],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://floor/low_poly_stylized_ground/textures/Merged_Cube_baseColor.jpeg"
-dest_files=[ "res://.import/Merged_Cube_baseColor.jpeg-74d2da7465e9ce4ad08c65854c92b640.s3tc.stex", "res://.import/Merged_Cube_baseColor.jpeg-74d2da7465e9ce4ad08c65854c92b640.etc2.stex" ]
+dest_files=[ "res://.import/Merged_Cube_baseColor.jpeg-74d2da7465e9ce4ad08c65854c92b640.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

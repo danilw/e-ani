@@ -23,8 +23,8 @@ uniform vec4 ao_texture_channel;
 uniform float ao_light_affect;
 uniform sampler2D texture_depth : hint_black;
 uniform float depth_scale;
-uniform int depth_min_layers;
-uniform int depth_max_layers;
+const int depth_min_layers=8;
+const int depth_max_layers=24;
 uniform vec2 depth_flip;
 uniform vec3 uv1_scale;
 uniform vec3 uv1_offset;
@@ -45,7 +45,7 @@ void fragment() {
 	tcol_depth_oo=min(pow(4.*tcol_depth_oo,2.),1.);
 	{
 		vec3 view_dir = normalize(normalize(-VERTEX)*mat3(TANGENT*depth_flip.x,-BINORMAL*depth_flip.y,NORMAL));
-		float num_layers = mix(float(depth_max_layers),float(depth_min_layers), abs(dot(vec3(0.0, 0.0, 1.0), view_dir)));
+		float num_layers = mix(float(depth_max_layers),float(depth_min_layers), clamp(abs(dot(vec3(0.0, 0.0, 1.0), view_dir)),0.,1.));
 		if(tcol_depth_oo>0.75)
 		{
 			float layer_depth = 1.0 / num_layers;
@@ -97,7 +97,7 @@ void fragment() {
 	    ec=mix(ec,vec3(0.2,0.52,01.5),0.1+0.9*tv);
 		ec=mix(ec,vec3(0.05,0.1,02.98),0.+0.25*tcol_depth);
 		float ttv=smoothstep(1.,4.,base_uv.x*0.2+mod(TIME,10.))*smoothstep(10,6.,base_uv.x*0.2+mod(TIME,10.));
-		EMISSION+=(tcol_depth_o)*(vec3(0.85,0.81,0.58)*ttv+(otcd))*6.*pow(rim_tex.y,0.5+8.*(tcol_depth+2.5*(1.-pow(rim_tex.y,2.))))*ec;
+		EMISSION+=(tcol_depth_o)*(3.3*vec3(0.85,0.81,0.58)*ttv+(otcd))*6.*pow(rim_tex.y,0.5+8.*(tcol_depth+2.5*(1.-pow(rim_tex.y,2.))))*ec;
 		//RIM = rim*rim_tex.x;
 		//RIM_TINT = rim_tint*rim_tex.y;
 		
