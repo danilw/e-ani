@@ -14,7 +14,13 @@
 
 **Web version:** this game work in HTML5(wasm) build [Link to web-build](https://danilw.itch.io/e-ani-webgl?password=doit). **Updated 2020**: fixed and now it works.
 
-### Contact: [**Join discord server**](https://discord.gg/JKyqWgt)
+___
+
+### Contact with me:
+
+**Matrix-chat room `#Shadertoy:envs.net` invite link** [matrix.to](https://matrix.to/#/#Shadertoy:envs.net) *(use web UI Element if you dont have acc)*
+
+___
 
 ### Video:
 
